@@ -1,0 +1,41 @@
+{
+  "name": "koa-angular-seed",
+  "version": "0.0.1",
+  "description": "Angular.js with Koa.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --harmony server.js"
+  },
+  "author": [
+    {
+      "name": "Patrick Stapleton",
+      "email": "github@gdi2290.com",
+      "url": "www.gdi2290.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/gdi2290/koa-angular-seed.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "keywords": [
+    "koa",
+    "angular",
+    "seed",
+    "angularjs",
+    "koajs"
+  ],
+  "dependencies": {
+    "koa": "latest"
+  },
+  "devDependencies": {
+  },
+  "engines": {
+    "node": "0.11.x"
+  }
+}
