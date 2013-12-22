@@ -34,7 +34,8 @@
     "koa": "latest",
     "koa-render": "~0.1.0",
     "koa-route": "~1.0.2",
-    "jade": "~0.35.0"
+    "jade": "~0.35.0",
+    "koa-logger": "~1.1.0"
   },
   "devDependencies": {},
   "engines": {
