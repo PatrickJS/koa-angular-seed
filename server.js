@@ -1,3 +1,3 @@
-var app = require('./server/app')(__dirname);
-app.listen(3000);
+var app = require('./server/app');
+app(__dirname).listen(3000);
 console.log('listening on port 3000');
