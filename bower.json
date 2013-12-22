@@ -1,0 +1,24 @@
+{
+  "name": "koa-angular-seed",
+  "version": "0.0.1",
+  "homepage": "https://github.com/gdi2290/koa-angular-seed",
+  "authors": [
+    "gdi2290 <github@gdi2290.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "angular": "latest",
+    "hoodie": "latest",
+    "angular-route": "latest",
+    "angular-animate": "latest"
+  },
+  "devDependencies": {}
+}
