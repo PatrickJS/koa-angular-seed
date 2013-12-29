@@ -2,6 +2,7 @@
   "name": "koa-angular-seed",
   "version": "0.0.1",
   "homepage": "https://github.com/gdi2290/koa-angular-seed",
+  "description": "Angular.js with Koa.js",
   "authors": [
     "gdi2290 <github@gdi2290.com>"
   ],
