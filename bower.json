@@ -16,10 +16,9 @@
   ],
   "dependencies": {
     "jquery": "latest",
-    "angular": "latest",
-    "hoodie": "latest",
-    "angular-route": "latest",
-    "angular-animate": "latest"
+    "angular": "1.2.8",
+    "angular-route": "1.2.8",
+    "angular-animate": "1.2.8"
   },
   "devDependencies": {}
 }
