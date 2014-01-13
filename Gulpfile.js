@@ -1,6 +1,7 @@
 var gulp   = require('gulp');
 var stylus = require('gulp-stylus');
 var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 var browserify = require('gulp-browserify');
 var refresh = require('gulp-livereload');
 var livereload = require('tiny-lr');
@@ -11,6 +12,7 @@ var paths  = require('./config/path.json');
 gulp.task('browserify', function(cb) {
   return gulp.task(['client/**/*.js'])
     .pipe(browserify());
+    .pipe(concat('dest.js'))
 });
 
 gulp.task('uglify', function(cb) {
