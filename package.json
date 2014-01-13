@@ -35,10 +35,12 @@
     "koa-render": "latest",
     "koa-route": "latest",
     "koa-logger": "latest",
-    "gulp": "latest",
     "jade": "latest"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-stylus": "latest"
+  },
   "engines": {
     "node": "0.11.x"
   }
