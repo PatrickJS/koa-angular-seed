@@ -1,7 +1,12 @@
-var gulp = require('gulp');
+var gulp   = require('gulp');
 var stylus = require('gulp-stylus');
-var paths = require('./config/path.json');
+var browserify = require('gulp-browserify');
 
+var paths  = require('./config/path.json');
+gulp.task('browserify', function(cb) {
+  return gulp.task(['client/**/*.js'])
+    .pipe(browserify());
+});
 
 gulp.task('stylus', function(cb) {
   gulp.src(paths.stylus.src)
