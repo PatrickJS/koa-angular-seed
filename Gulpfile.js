@@ -31,6 +31,10 @@ gulp.task('styles', function(cb) {
     }))
     .pipe(gulp.dest(config.build.styles))
     .pipe(gulp.dest(config.paths.stylus.dest));
+gulp.task('copy', function(cb) {
+  gulp.src(config.paths.public)
+    .pipe(gulp.dest(config.build.path))
+    .pipe(refresh(server));
 });
 
 gulp.task('lr-server', function(cb) {
@@ -46,7 +50,7 @@ gulp.task('clean', function(cb) {
 
 
 gulp.task('default', function(cb) {
-  gulp.run('clean', 'lr-server', 'scripts', 'styles');
+  gulp.run('clean', 'copy', 'lr-server', 'scripts', 'styles');
 
   gulp.watch('client/**.js', function(event) {
     gulp.run('scripts');
