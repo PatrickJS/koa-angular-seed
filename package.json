@@ -1,6 +1,6 @@
 {
   "name": "koa-angular-seed",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Angular.js with Koa.js",
   "main": "server.js",
   "scripts": {
