@@ -7,4 +7,5 @@ package.json
 .bowerrc
 .gitignore
 Gulpfile.js
+Gruntfile.js
 README.md

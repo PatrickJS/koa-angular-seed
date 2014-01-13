@@ -5,11 +5,13 @@
   "build": {
     "path": "build",
     "scripts": "scripts.js",
-    "styles": "styles.css"
+    "styles": "styles.css",
+    "images": "build/images/"
   },
   "paths": {
     "build": "build",
     "public": "public/**",
+    "images": "public/images/*.{png,jpg,gif}",
     "scripts": [
       "client/*.js",
       "client/**/*.js"

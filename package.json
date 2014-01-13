@@ -38,14 +38,16 @@
     "jade": "latest"
   },
   "devDependencies": {
+    "tiny-lr": "0.0.5",
     "gulp": "latest",
     "gulp-stylus": "latest",
     "gulp-livereload": "~0.2.0",
     "gulp-concat": "~2.1.7",
     "gulp-browserify": "~0.2.4",
     "gulp-uglify": "~0.1.0",
-    "tiny-lr": "0.0.5",
-    "gulp-clean": "~0.2.2"
+    "gulp-clean": "~0.2.2",
+    "gulp-rimraf": "0.0.6",
+    "gulp-imagemin": "~0.1.4"
   },
   "engines": {
     "node": "0.11.x"
