@@ -1,0 +1,6 @@
+{
+  "stylus": {
+    "src": "./client/styles/*.styl",
+    "dest": "./dest/"
+  }
+}
