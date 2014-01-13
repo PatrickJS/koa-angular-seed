@@ -44,7 +44,8 @@
     "gulp-concat": "~2.1.7",
     "gulp-browserify": "~0.2.4",
     "gulp-uglify": "~0.1.0",
-    "tiny-lr": "0.0.5"
+    "tiny-lr": "0.0.5",
+    "gulp-clean": "~0.2.2"
   },
   "engines": {
     "node": "0.11.x"
