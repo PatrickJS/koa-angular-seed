@@ -2,11 +2,12 @@ var gulp   = require('gulp');
 var stylus = require('gulp-stylus');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var rimraf = require('gulp-rimraf');
 var clean  = require('gulp-clean');
 var browserify = require('gulp-browserify');
 var refresh    = require('gulp-livereload');
 var livereload = require('tiny-lr');
-
+var imagemin   = require('gulp-imagemin');
 var server = livereload();
 var config  = require('./config/config.json');
 
@@ -20,16 +21,32 @@ gulp.task('scripts', function(cb) {
 
 gulp.task('styles', function(cb) {
   return gulp.src(config.paths.styles)
-    .pipe(stylus({
-      conpress: true
-    }))
+    .pipe(stylus({ conpress: true }))
     .pipe(concat(config.build.styles))
     .pipe(gulp.dest(config.build.path))
     .pipe(refresh(server));
 });
 
+gulp.task('images', function(cb) {
+  return gulp.src(config.paths.images)
+    .pipe(imagemin({ optimizationLevel: 5 }))
+    .pipe(gulp.dest(config.build.images))
+    .pipe(refresh(server));
+});
+
+gulp.task('uglify', function(cb) {
+  return gulp.src(config.paths.scripts)
+    .pipe(uglify())
+    .pipe(gulp.dest(config.build.path));
+});
+
+gulp.task('clean', function(cb) {
+  return gulp.src('build', {read: false})
+    .pipe(clean({force: true}));
+});
+
 gulp.task('copy', function(cb) {
-  gulp.src(config.paths.public)
+  return gulp.src(config.paths.public)
     .pipe(gulp.dest(config.build.path))
     .pipe(refresh(server));
 });
@@ -40,21 +57,8 @@ gulp.task('lr-server', function(cb) {
   });
 });
 
-gulp.task('uglify', function(cb) {
-  return gulp.src(config.paths.scripts)
-    .pipe(uglify())
-    .pipe(gulp.dest(config.build.path));
-});
-
-gulp.task('clean', function(cb) {
-  // gulp.src(config.build.path, {read: false})
-  //   .pipe(clean({force: true}))
-  //   .pipe(gulp.dest(config.build.path));
-});
-
-
-gulp.task('default', function(cb) {
-  gulp.run('clean', 'copy', 'lr-server', 'scripts', 'styles');
+gulp.task('build', function(cb) {
+  gulp.run('copy', 'lr-server', 'scripts', 'styles', 'images');
 
   gulp.watch(config.paths.scripts, function(event) {
     gulp.run('scripts');
@@ -64,9 +68,10 @@ gulp.task('default', function(cb) {
     gulp.run('styles');
   });
 
-  // gulp.watch(config.paths.public, function(event) {
-  //   gulp.run('copy');
-  // });
+});
 
+
+gulp.task('default', function(cb) {
+  gulp.run('build');
 });
 
