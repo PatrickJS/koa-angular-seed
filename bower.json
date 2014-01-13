@@ -1,8 +1,8 @@
 {
   "name": "koa-angular-seed",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/gdi2290/koa-angular-seed",
-  "description": "Angular.js with Koa.js",
+  "description": "An Angular.js seed for Koa apps with gulp, stylus, and browserify",
   "authors": [
     "gdi2290 <github@gdi2290.com>"
   ],

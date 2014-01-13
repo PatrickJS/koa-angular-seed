@@ -1,7 +1,7 @@
 {
   "name": "koa-angular-seed",
-  "version": "0.1.0",
-  "description": "Angular.js with Koa.js",
+  "version": "0.1.1",
+  "description": "An Angular.js seed for Koa apps with gulp, stylus, and browserify",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
