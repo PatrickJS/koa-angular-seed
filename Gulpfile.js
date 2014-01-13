@@ -3,16 +3,18 @@ var stylus = require('gulp-stylus');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var browserify = require('gulp-browserify');
-var refresh = require('gulp-livereload');
+var refresh    = require('gulp-livereload');
 var livereload = require('tiny-lr');
 
 var server = livereload();
 var paths  = require('./config/path.json');
 
-gulp.task('browserify', function(cb) {
+gulp.task('scripts', function(cb) {
   return gulp.task(['client/**/*.js'])
-    .pipe(browserify());
+    .pipe(browserify())
     .pipe(concat('dest.js'))
+    .pipe(gulp.dest('build'))
+    .pipe(refresh(server));
 });
 
 gulp.task('uglify', function(cb) {
