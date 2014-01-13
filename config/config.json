@@ -11,9 +11,10 @@
     "build": "build",
     "public": "public/**",
     "scripts": [
+      "client/*.js",
       "client/**/*.js"
     ],
-    "stylus": [
+    "styles": [
       "client/styles/*.styl"
     ]
   }
