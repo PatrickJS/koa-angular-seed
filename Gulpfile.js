@@ -2,6 +2,7 @@ var gulp   = require('gulp');
 var stylus = require('gulp-stylus');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var clean  = require('gulp-clean');
 var browserify = require('gulp-browserify');
 var refresh    = require('gulp-livereload');
 var livereload = require('tiny-lr');
@@ -35,8 +36,14 @@ gulp.task('lr-server', function() {
   });
 });
 
+gulp.task('clean', function(cb) {
+  gulp.src('build', {read: false})
+    .pipe(clean({force: true}));
+});
+
+
 gulp.task('default', function(cb) {
-  gulp.run('lr-server', 'scripts', 'styles');
+  gulp.run('clean', 'lr-server', 'scripts', 'styles');
 
   gulp.watch('dist/js/**', function(event) {
     gulp.run('scripts');
