@@ -5,7 +5,7 @@ var browserify = require('gulp-browserify');
 var refresh = require('gulp-livereload');
 var livereload = require('tiny-lr');
 
-var server = lr();
+var server = livereload();
 var paths  = require('./config/path.json');
 
 gulp.task('browserify', function(cb) {
