@@ -1,0 +1,8 @@
+client/**
+bower_components/**
+bower.json
+package.json
+.bowerrc
+.gitignore
+Gulpfile.js
+README.md
