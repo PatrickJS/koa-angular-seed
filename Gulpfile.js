@@ -19,7 +19,7 @@ gulp.task('scripts', function(cb) {
 });
 
 gulp.task('styles', function(cb) {
-  return gulp.src(config.paths.stylus)
+  return gulp.src(config.paths.styles)
     .pipe(stylus({
       conpress: true
     }))
@@ -47,21 +47,26 @@ gulp.task('uglify', function(cb) {
 });
 
 gulp.task('clean', function(cb) {
-  gulp.src('build', {read: false})
-    .pipe(clean({force: true}));
+  // gulp.src(config.build.path, {read: false})
+  //   .pipe(clean({force: true}))
+  //   .pipe(gulp.dest(config.build.path));
 });
 
 
 gulp.task('default', function(cb) {
   gulp.run('clean', 'copy', 'lr-server', 'scripts', 'styles');
 
-  gulp.watch('client/**.js', function(event) {
+  gulp.watch(config.paths.scripts, function(event) {
     gulp.run('scripts');
   });
 
-  gulp.watch('client/styles/**.styl', function(event) {
+  gulp.watch(config.paths.styles, function(event) {
     gulp.run('styles');
   });
+
+  // gulp.watch(config.paths.public, function(event) {
+  //   gulp.run('copy');
+  // });
 
 });
 
