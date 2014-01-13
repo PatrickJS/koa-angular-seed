@@ -25,17 +25,25 @@ gulp.task('uglify', function(cb) {
 
 gulp.task('styles', function(cb) {
   return gulp.src(paths.stylus.src)
-  .pipe(stylus())
-  .pide(gulp.dest(paths.stylus.dest));
+    .pipe(stylus())
+    .pide(gulp.dest(paths.stylus.dest));
 });
 
-gulp.task('server', function() {
+gulp.task('lr-server', function() {
   server.listen(35729, function(err) {
     if (err) return console.log(err);
   });
 });
 
 gulp.task('default', function(cb) {
-  gulp.run('stylus');
+  gulp.run('lr-server', 'scripts', 'styles');
+
+  gulp.watch('dist/js/**', function(event) {
+    gulp.run('scripts');
+  });
+
+  gulp.watch('dist/css**', function(event) {
+    gulp.run('styles');
+  });
 });
 
