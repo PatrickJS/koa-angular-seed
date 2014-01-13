@@ -11,10 +11,10 @@ var server = livereload();
 var paths  = require('./config/path.json');
 
 gulp.task('scripts', function(cb) {
-  return gulp.task(['client/**/*.js'])
+  return gulp.src(config.paths.scripts.src)
     .pipe(browserify())
-    .pipe(concat('dest.js'))
-    .pipe(gulp.dest('build'))
+    .pipe(concat(config.build.scripts))
+    .pipe(gulp.dest(config.paths.scripts.dest))
     .pipe(refresh(server));
 });
 
