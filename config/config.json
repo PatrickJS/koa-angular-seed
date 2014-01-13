@@ -3,21 +3,18 @@
     "port": 35729
   },
   "build": {
+    "path": "build",
     "scripts": "scripts.js",
     "styles": "styles.css"
   },
   "paths": {
-    "scripts": {
-      "src": [
-        "./client/**/*.js"
-      ],
-      "dest": "build"
-      },
-    "stylus": {
-      "src": [
-        "./client/styles/*.styl"
-      ],
-      "dest": "build"
-    }
+    "build": "build",
+    "public": "public/**",
+    "scripts": [
+      "client/**/*.js"
+    ],
+    "stylus": [
+      "client/styles/*.styl"
+    ]
   }
 }
