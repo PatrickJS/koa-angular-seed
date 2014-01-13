@@ -10,12 +10,4 @@ body(ng-controller="MainController")
   script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-route.js")
   script.
     Error.stackTraceLimit = Infinity;
-    angular.module('ngKoaApp', [
-      'ngRoute',
-      'ngAnimate'
-    ])
-    .controller('MainController', function($scope) {
-      $scope.text = 'Angular.js';
-    })
-
     angular.bootstrap(document.body, ['ngKoaApp']);
