@@ -1,0 +1,23 @@
+{
+  "livereload": {
+    "port": 35729
+  },
+  "build": {
+    "scripts": "scripts.js",
+    "styles": "styles.css"
+  },
+  "paths": {
+    "scripts": {
+      "src": [
+        "./client/**/*.js"
+      ],
+      "dest": "build"
+      },
+    "stylus": {
+      "src": [
+        "./client/styles/*.styl"
+      ],
+      "dest": "build"
+    }
+  }
+}
