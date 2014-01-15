@@ -1,7 +1,7 @@
 var koa = require('koa');
-var app = koa();
 
 module.exports = function(SERVER_ROOT) {
+  var app = koa();
   app.name = 'Koa-Angular-Seed';
   app.rootPath = SERVER_ROOT;
 
@@ -12,4 +12,4 @@ module.exports = function(SERVER_ROOT) {
   require('./routes')(app);
 
   return app;
-}
+};
