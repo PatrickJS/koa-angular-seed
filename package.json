@@ -12,7 +12,7 @@
     "postuninstall": "node npm-scripts postuninstall",
     "preupdate": "node npm-scripts preupdate",
     "postupdate": "node npm-scripts postupdate",
-    "test": "karma start test/karma.conf.js",
+    "test": "karma start test/karma-unit.conf.js",
     "start": "nodemon --harmony server.js"
   },
   "author": [
