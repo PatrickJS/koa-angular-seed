@@ -44,7 +44,7 @@ gulp.task('uglify', function(cb) {
 });
 
 gulp.task('clean', function(cb) {
-  return gulp.src('build', {read: false})
+  gulp.src('build', {read: false})
     .pipe(clean({force: true}));
 });
 
@@ -71,7 +71,7 @@ gulp.task('watch', function(cb) {
 });
 
 gulp.task('build', function(cb) {
-  gulp.run('copy', 'lr-server', 'scripts', 'styles', 'images');
+  gulp.run(/*'clean',*/ 'copy', 'lr-server', 'scripts', 'styles', 'images');
 });
 
 
