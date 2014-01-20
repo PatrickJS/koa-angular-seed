@@ -4,7 +4,15 @@
   "description": "An Angular.js seed for Koa apps with gulp, stylus, and browserify",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "node npm-scripts prepublish",
+    "postpublish": "node npm-scripts postpublish",
+    "preinstall": "node npm-scripts preinstall",
+    "postinstall": "node npm-scripts postinstall",
+    "preuninstall": "node npm-scripts preuninstall",
+    "postuninstall": "node npm-scripts postuninstall",
+    "preupdate": "node npm-scripts preupdate",
+    "postupdate": "node npm-scripts postupdate",
+    "test": "karma start test/karma.conf.js",
     "start": "nodemon --harmony server.js"
   },
   "author": [
