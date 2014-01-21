@@ -20,6 +20,8 @@
   "smarttabs": true,
   "globals": {
     "sinon": false,
+    "by": false,
+    "element": false,
     "after": false,
     "afterEach": false,
     "angular": false,
