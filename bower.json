@@ -8,17 +8,14 @@
   ],
   "license": "MIT",
   "ignore": [
-    "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "bower_components"
   ],
   "dependencies": {
     "jquery": "latest",
-    "angular": "1.2.8",
-    "angular-route": "1.2.8",
-    "angular-animate": "1.2.8"
+    "angular": "1.2.10",
+    "angular-route": "1.2.10",
+    "angular-animate": "1.2.10"
   },
   "devDependencies": {}
 }
