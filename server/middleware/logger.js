@@ -20,9 +20,5 @@ module.exports = function(app) {
   //   console.log('%s %s - %s', this.method, this.url, ms);
   // });
 
-  app.on('error', function(err, ctx){
-    console.error('server error', err, ctx);
-  });
-
-}
+};
 
