@@ -7,6 +7,6 @@ package.json
 .bowerrc
 .gitignore
 .git
-Gulpfile.js
 Gruntfile.js
+gulpfile.js
 README.md
