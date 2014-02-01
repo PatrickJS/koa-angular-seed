@@ -6,6 +6,7 @@ bower.json
 package.json
 .bowerrc
 .gitignore
+.git
 Gulpfile.js
 Gruntfile.js
 README.md
