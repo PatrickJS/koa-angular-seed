@@ -10,8 +10,11 @@ module.exports = function(SERVER_ROOT) {
   // Errors
   var errors = require('./errors')(app, config);
 
-  // Logging
+  // Middleware
   require('./middleware')(app, config, errors);
+
+  // Database
+  require('./database')(app, config, errors);
 
   // Routes
   require('./routes')(app, config, errors);
