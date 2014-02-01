@@ -2,14 +2,19 @@ var koa = require('koa');
 
 module.exports = function(SERVER_ROOT) {
   var app = koa();
-  app.name = 'Koa-Angular-Seed';
-  app.rootPath = SERVER_ROOT;
+  app.directory = SERVER_ROOT;
 
-  // logger
-  require('./middleware/logger')(app);
+  // Config
+  var config = require('./config')(app);
 
-  // routes
-  require('./routes')(app);
+  // Errors
+  var errors = require('./errors')(app, config);
+
+  // Logging
+  require('./middleware')(app, config, errors);
+
+  // Routes
+  require('./routes')(app, config, errors);
 
   return app;
 };
