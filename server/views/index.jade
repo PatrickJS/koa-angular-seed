@@ -5,10 +5,11 @@ head
 body(ng-controller="MainController")
   | Hello from {{ text }}
 
-  script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.js")
-  script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-animate.js")
-  script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-route.js")
-  script(src='scripts.js')
   script.
     Error.stackTraceLimit = Infinity;
+  script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js")
+  script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-animate.js")
+  script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js")
+  script(src='scripts.js')
+  script.
     angular.bootstrap(document.body, ['ngKoaApp']);
