@@ -1,4 +1,9 @@
 {
+  "name": "Koa-Angular-Seed",
+  "views": {
+    "path": "./server/views",
+    "engine": "jade"
+  },
   "livereload": {
     "port": 35729
   },
