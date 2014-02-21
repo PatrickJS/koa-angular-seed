@@ -61,21 +61,13 @@ gulp.task('lr-server', function(cb) {
 });
 
 gulp.task('watch', function(cb) {
-  gulp.watch(config.paths.scripts, function(event) {
-    gulp.run('scripts');
-  });
+  gulp.watch(config.paths.scripts, ['styles']);
 
-  gulp.watch(config.paths.styles, function(event) {
-    gulp.run('styles');
-  });
+  gulp.watch(config.paths.styles, ['styles']);
 });
 
-gulp.task('build', function(cb) {
-  gulp.run(/*'clean',*/ 'copy', 'lr-server', 'scripts', 'styles', 'images');
-});
+gulp.task('build', [/*'clean',*/ 'copy', 'lr-server', 'scripts', 'styles', 'images']);
 
 
-gulp.task('default', function(cb) {
-  gulp.run('build', 'watch');
-});
+gulp.task('default', ['build', 'watch']);
 
