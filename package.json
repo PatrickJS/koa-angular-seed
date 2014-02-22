@@ -45,8 +45,10 @@
     "koa-logger": "latest",
     "jade": "latest",
     "koa-static": "~1.4.2",
-    "bluebird": "~1.0.1",
-    "co-body": "0.0.1"
+    "bluebird": "~1.0.5",
+    "co-body": "0.0.1",
+    "socket.io": "~0.9.16",
+    "shen": "0.0.3",
     "gulp-autoprefixer": "0.0.6"
   },
   "devDependencies": {
@@ -63,5 +65,6 @@
   },
   "engines": {
     "node": "0.11.x"
-  }
+  },
+  "engineStrict": true
 }

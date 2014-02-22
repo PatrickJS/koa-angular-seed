@@ -1,8 +1,8 @@
 var koa = require('koa');
 
-module.exports = function(SERVER_ROOT) {
+module.exports = function(ROOT) {
   var app = koa();
-  app.directory = SERVER_ROOT;
+  app.directory = ROOT;
 
   // Config
   var config = require('./config')(app);
@@ -15,6 +15,9 @@ module.exports = function(SERVER_ROOT) {
 
   // Database
   require('./database')(app, config, errors);
+
+  // Sockets
+  require('./sockets')(app, config, errors);
 
   // Routes
   require('./routes')(app, config, errors);

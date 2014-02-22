@@ -7,6 +7,9 @@
   "livereload": {
     "port": 35729
   },
+  "sockets": {
+    "port": 8080
+  },
   "build": {
     "path": "build",
     "scripts": "scripts.js",

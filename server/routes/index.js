@@ -4,7 +4,7 @@ var serve = require('koa-static');
 
 
 module.exports = function(app, config, errors) {
-  var controller = require('./controllers')(app, config, errors);
+  var controller = require('../controllers')(app, config, errors);
 
   // set views engine
   app.use(views(config.views.path, config.views.engine));
@@ -29,5 +29,5 @@ module.exports = function(app, config, errors) {
     this.body = yield this.render('index', locals);
   }));
 
-
+  return app;
 };

@@ -1,5 +1,5 @@
-var DB = [];
 var parse = require('co-body');
+var DB = [];
 
 function *create() {
   var todo = yield parse.json(this);
