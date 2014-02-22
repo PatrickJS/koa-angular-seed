@@ -36,20 +36,20 @@
     "angular",
     "seed",
     "angularjs",
-    "koajs"
+    "koajs",
+    "shen"
   ],
   "dependencies": {
     "koa": "latest",
     "koa-render": "latest",
     "koa-route": "latest",
     "koa-logger": "latest",
-    "jade": "latest",
     "koa-static": "~1.4.2",
-    "bluebird": "~1.0.5",
     "co-body": "0.0.1",
-    "socket.io": "~0.9.16",
     "shen": "0.0.3",
-    "gulp-autoprefixer": "0.0.6"
+    "bluebird": "~1.0.5",
+    "jade": "latest",
+    "socket.io": "~0.9.16"
   },
   "devDependencies": {
     "tiny-lr": "0.0.5",
@@ -61,7 +61,9 @@
     "gulp-uglify": "git://github.com/jonathanepollack/gulp-uglify.git#master",
     "gulp-clean": "~0.2.2",
     "gulp-imagemin": "~0.1.4",
-    "gulp-ngmin": "~0.1.1"
+    "gulp-ngmin": "~0.1.1",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-rev": "~0.2.1"
   },
   "engines": {
     "node": "0.11.x"

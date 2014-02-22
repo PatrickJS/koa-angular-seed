@@ -1,4 +1,5 @@
 var gulp   = require('gulp');
+var rev    = require('gulp-rev');
 var ngmin  = require('gulp-ngmin');
 var stylus = require('gulp-stylus');
 var uglify = require('gulp-uglify');
@@ -9,7 +10,6 @@ var browserify = require('gulp-browserify');
 var refresh    = require('gulp-livereload');
 var livereload = require('tiny-lr');
 var imagemin   = require('gulp-imagemin');
-
 var config = require('./config/config.json');
 var server = livereload();
 
@@ -26,7 +26,7 @@ gulp.task('scripts', function(cb) {
 gulp.task('styles', function(cb) {
   return gulp.src(config.paths.styles)
     .pipe(stylus({ conpress: true }))
-    .pipe(prefix.apply(this, config.build.prefix))
+    .pipe(prefix.apply(prefix, config.build.prefix))
     .pipe(concat(config.build.styles))
     .pipe(gulp.dest(config.build.path))
     .pipe(refresh(server));
