@@ -4,6 +4,7 @@ var stylus = require('gulp-stylus');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var clean  = require('gulp-clean');
+var prefix = require('gulp-autoprefixer');
 var browserify = require('gulp-browserify');
 var refresh    = require('gulp-livereload');
 var livereload = require('tiny-lr');
@@ -25,6 +26,7 @@ gulp.task('scripts', function(cb) {
 gulp.task('styles', function(cb) {
   return gulp.src(config.paths.styles)
     .pipe(stylus({ conpress: true }))
+    .pipe(prefix.apply(this, config.build.prefix))
     .pipe(concat(config.build.styles))
     .pipe(gulp.dest(config.build.path))
     .pipe(refresh(server));

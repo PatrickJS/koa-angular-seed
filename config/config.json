@@ -11,7 +11,13 @@
     "path": "build",
     "scripts": "scripts.js",
     "styles": "styles.css",
-    "images": "build/images/"
+    "images": "build/images/",
+    "prefix": [
+      "last 1 version",
+      "> 1%",
+      "ie 8",
+      "ie 7"
+    ]
   },
   "paths": {
     "build": "build",

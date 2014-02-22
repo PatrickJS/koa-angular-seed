@@ -47,6 +47,7 @@
     "koa-static": "~1.4.2",
     "bluebird": "~1.0.1",
     "co-body": "0.0.1"
+    "gulp-autoprefixer": "0.0.6"
   },
   "devDependencies": {
     "tiny-lr": "0.0.5",
