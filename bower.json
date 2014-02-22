@@ -13,9 +13,12 @@
   ],
   "dependencies": {
     "jquery": "latest",
-    "angular": "1.2.10",
-    "angular-route": "1.2.10",
-    "angular-animate": "1.2.10"
+    "angular": "1.2.13",
+    "angular-route": "1.2.13",
+    "angular-animate": "1.2.13"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "resolutions": {
+    "angular": "1.2.13"
+  }
 }
