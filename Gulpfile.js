@@ -63,7 +63,7 @@ gulp.task('lr-server', function(cb) {
 });
 
 gulp.task('watch', function(cb) {
-  gulp.watch(config.paths.scripts, ['styles']);
+  gulp.watch(config.paths.scripts, ['scripts']);
 
   gulp.watch(config.paths.styles, ['styles']);
 });
