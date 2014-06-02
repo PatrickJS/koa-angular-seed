@@ -44,12 +44,12 @@
     "koa-render": "latest",
     "koa-route": "latest",
     "koa-logger": "latest",
-    "koa-static": "~1.4.2",
-    "co-body": "0.0.1",
-    "shen": "0.0.3",
-    "bluebird": "~1.0.5",
+    "koa-static": "latest",
+    "co-body": "0.0.2",
+    "shen": "0.0.5",
+    "bluebird": "~1.2.4",
     "jade": "latest",
-    "socket.io": "~0.9.16"
+    "socket.io": "~1.0.3"
   },
   "devDependencies": {
     "tiny-lr": "0.0.5",
